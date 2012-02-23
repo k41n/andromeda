@@ -1,0 +1,11 @@
+%h1
+  Авторизация
+= form_for Session.new do |form|
+  = form.label :login, t(:login)
+  = form.text_field :login
+  %br
+  = form.label :password, t(:password)
+  = form.text_field :password
+  %br
+  = form.submit t(:enter)
+= link_to t(:register), new_player_path

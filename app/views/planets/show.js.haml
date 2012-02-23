@@ -1,0 +1,3 @@
+- @planet = Planet.find(params[:id])
+$('#stats').html("#{j(render :partial => 'planets/stats', :object => @planet)}");
+init_planet_update("#{@planet.id}")

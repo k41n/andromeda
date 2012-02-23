@@ -1,0 +1,22 @@
+- if @building.upgrading_until.nil?
+  %h2
+    = t(:build)
+    = @building.next_level
+    = t(:level)
+    %br
+    = t(@building.name)
+  #{t(:metal)}: #{@building.next_level_metal}
+  %br
+  #{t(:silicon)}: #{@building.next_level_silicon}
+  %br
+  #{t(:plutonium)}: #{@building.next_level_plutonium}
+  %br
+  #{t(:money)}: #{@building.next_level_money}
+  = link_to t(:begin_building), begin_upgrading_building_path(@building), :remote => true, :class=>'green_go'
+- else
+  %h2
+    = t(:upgrading)
+    = @building.next_level
+    = t(:level)
+    %div{:id => "upgrading_building_#{@building.id}_counter", "data-left" => (@building.upgrading_until - Time.zone.now).to_i}
+      #{t(:time_left, :seconds => ('%d' % (@building.upgrading_until - Time.zone.now)))}

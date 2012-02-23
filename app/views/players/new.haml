@@ -1,0 +1,13 @@
+%h1
+  Регистрация
+= form_for Player.new do |form|
+  = form.label :login, t(:login)
+  = form.text_field :login
+  %br
+  = form.label :password, t(:password)
+  = form.password_field :password
+  %br
+  = form.label :password_confirmation, t(:password_confirmation)
+  = form.password_field :password_confirmation
+  %br
+  = form.submit(:create)

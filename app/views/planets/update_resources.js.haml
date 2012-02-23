@@ -1,0 +1,10 @@
+- @planet = Planet.find(params[:id])
+try
+{
+$('#resources').html("#{j(render :partial => 'planets/resources', :object => @planet)}");
+}
+catch (e)
+{
+console.log(e)
+}
+

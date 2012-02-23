@@ -1,0 +1,1 @@
+= link_to image_tag("planet#{planet.id % 3 + 1}.png", :size=>'128x128'), planet_path(planet), :remote => true, :class => 'planet', "data-x" => "#{planet.x}", "data-y" => "#{planet.y}"

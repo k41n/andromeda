@@ -1,0 +1,3 @@
+- @building = Building.find(params[:id])
+$('#details').html("#{j(render :partial => 'upgrade_info')}");
+init_upgrading_building("#{@building.id}")

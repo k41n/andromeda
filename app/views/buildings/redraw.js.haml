@@ -1,0 +1,2 @@
+- @building = Building.find(params[:id])
+$("#building_#{@building.id}").replaceWith("#{j(render @building)}");

@@ -1,0 +1,23 @@
+ru:
+  login: Логин
+  password: Пароль
+  enter: Вход
+  register: Регистрация
+  create: Создать
+  password_confirmation: Подтверждение пароля
+  first_colony: Земля
+  metal: Металл
+  silicon: Кремний
+  plutonium: Плутоний
+  population: Население
+  metal_mine: Шахта по добыче металла
+  silicon_mine: Шахта по добыче кремния
+  plutonium_mine: Плутониевый реактор
+  level: Уровень
+  build: Построить
+  title: Андромеда
+  money: Деньги
+  begin_building: Начать строительство
+  time_left: Осталось %{seconds} секунд
+  upgrading: Строится
+  player_money: "На счетах: %{left} трлн. рублей"

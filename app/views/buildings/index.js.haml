@@ -1,0 +1,5 @@
+- @planet = Planet.find(params[:planet_id])
+$('#details').html("#{j(render @planet.buildings)}");
+- upgrading_buildings = @planet.buildings.where('upgrading_until IS NOT NULL and upgrading_until > ?', Time.zone.now)
+- unless upgrading_buildings.empty?
+  init_upgrading_building("#{upgrading_buildings.first.id}")

@@ -1,0 +1,10 @@
+.building{:id=>"building_#{building.id}"}
+  = link_to image_tag("#{building.name}.png", :size=>'128x128'), upgrade_building_path(building), :remote => true
+  - if building.upgrading_until.present? and building.upgrading_until > Time.zone.now
+    %div{:id => "upgrading_building_#{building.id}_counter", "data-left" => (building.upgrading_until - Time.zone.now).to_i}
+      #{t(:time_left, :seconds => ('%d' % (building.upgrading_until - Time.zone.now)))}
+  %br
+  = t(building.name)
+  %br
+  = t(:level)
+  = building.level

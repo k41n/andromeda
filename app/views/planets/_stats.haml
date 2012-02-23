@@ -1,0 +1,13 @@
+- planet = stats
+- if planet.player.id == session[:player_id]
+  %h2
+    #{planet.name} #{planet.x} : #{planet.y}
+
+  #resources
+    = render :partial=>'planets/resources', :object => planet
+  #buttons
+    = link_to image_tag('build.png'), planet_buildings_path(planet), :remote => true
+  #details
+- else
+  %h2
+    Эта планета принадлежит игроку #{planet.player.login}
